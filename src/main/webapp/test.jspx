@@ -1,0 +1,8 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+<jsp:directive.page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"/>
+<jsp:scriptlet><![CDATA[
+     String value = request.getParameter("value");
+     out.println(value);
+]]>
+</jsp:scriptlet>
+</jsp:root>
