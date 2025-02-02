@@ -3,4 +3,18 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
          version="6.0">
+
+
+    <context-param>
+        <param-name>contact</param-name>
+        <param-value>C:\Users\yeong\IdeaProjects\FileUploadJSP\src\main\webapp\upload_prob10\WEB-INF\upload\contact\</param-value>
+    </context-param>
+    <context-param>
+        <param-name>image</param-name>
+        <param-value>C:\Users\yeong\IdeaProjects\FileUploadJSP\src\main\webapp\upload_prob10\WEB-INF\upload\image\</param-value>
+    </context-param>
+    <context-param>
+        <param-name>xml</param-name>
+        <param-value>C:\Users\yeong\IdeaProjects\FileUploadJSP\src\main\webapp\upload_prob10\upload\xml\</param-value>
+    </context-param>
 </web-app>
