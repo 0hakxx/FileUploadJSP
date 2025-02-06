@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" %>
 <%@ page import="com.oreilly.servlet.MultipartRequest, java.io.*, java.util.Enumeration" %>
 <%
-    String path = request.getRealPath("/cos_example3/upload");
+    String path = "C:\\Users\\yeong\\IdeaProjects\\FileUploadJSP\\src\\main\\webapp\\cos_example3\\upload"; //경로 설정
 
     MultipartRequest multi = new MultipartRequest(request, path, 1024*10*10, "UTF-8");
     Enumeration formNames = multi.getFileNames();
