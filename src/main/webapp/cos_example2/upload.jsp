@@ -14,8 +14,8 @@
         String fileExt = fileName.substring(extOffset+1).toLowerCase();
 
         if(!fileExt.equals("jpg") && !fileExt.equals("png") && !fileExt.equals("gif")) {
-            File fp = new File(path, fileName);
-            fp.delete();
+//            File fp = new File(path, fileName);
+//            fp.delete();
             out.println("<script>alert('허용된 확장자가 아닙니다.');history.back(-1);</script>");
             return;
         }
