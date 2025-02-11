@@ -24,13 +24,20 @@
 			long fileSize = item.getSize();
 
 			if(!userFileName.isEmpty() && fileSize>0){
-				String dir = request.getSession().getServletContext().getRealPath("/apache_commons/upload");
+				String dir = request.getSession().getServletContext().getRealPath("/Spring_commons/upload");
 
 				File saveFilePath = new File(dir);
 				if(!saveFilePath.exists()){
 					saveFilePath.mkdir();
 				}
-
+				//스프링 취약 코드 적용
+				int pos = userFileName.lastIndexOf("/");
+				if (pos == -1) {
+					pos = userFileName.lastIndexOf("\\");
+				}
+				if (pos != -1) {
+					userFileName = userFileName.substring(pos + 1);
+				}
 				item.write(new File(saveFilePath, userFileName));
 				out.println("<script>alert('\\'"+userFileName+"\\' 업로드 성공!');location.href='index.jsp'</script>");
 				result = true;
